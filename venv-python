@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Pre-requisites
+# direnv
+
+# Setup venv
+# https://github.com/direnv/direnv
+# https://rnorth.org/practical-direnv
+echo "layout python3" > .envrc &
+direnv allow &
