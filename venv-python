@@ -3,8 +3,22 @@
 # Pre-requisites
 # direnv
 
+text_color=`tput setaf 2`
+reset=`tput sgr0`
+
+echo -e "${text_color}Let's setup a Python development environment!${reset}"
+
 # Setup venv
 # https://github.com/direnv/direnv
 # https://rnorth.org/practical-direnv
-echo "layout python3" > .envrc &
-direnv allow &
+echo -e "${text_color}Setup and activate venv for Python3 with direnv${reset}"
+
+echo "layout python3" > .envrc
+
+direnv allow
+
+# .gitignore
+echo -e "${text_color}Add direnv specific files to .gitignore${reset}"
+
+echo ".direnv
+.envrc" >> .gitignore
